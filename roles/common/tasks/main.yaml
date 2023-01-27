@@ -1,0 +1,18 @@
+# Set hostame
+- name: Set hostname
+  become: true
+  ansible.builtin.hostname:
+    name: "{{ server.hostname }}"
+
+# Set timezone
+- name: Set timezone
+  become: true
+  community.general.timezone:
+    name: "{{ server.timezone }}"
+
+# Update all packages
+- name: Update all packages
+  become: true
+  ansible.builtin.apt:
+    upgrade: dist
+    update_cache: true

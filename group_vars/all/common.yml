@@ -1,0 +1,3 @@
+server:
+  hostname: "myhostname"
+  timezone: "Europe/Berlin"
